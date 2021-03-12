@@ -1,0 +1,151 @@
+// flexbox
+.flex {
+  display: flex;
+  &-d-c {
+    flex-direction: column;
+  }
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-sa {
+    justify-content: space-around;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-5 {
+    flex: 0.5;
+  }
+}
+// text styles
+.text-center {
+  text-align: center;
+}
+// margins
+.mr-0 {
+  margin: 0;
+}
+.mr-auto {
+  margin: auto;
+}
+// button styles
+.btn {
+  padding: 1.125rem 1.625rem; // 18px 26px;
+  color: $swatch_11 !important;
+  background: $swatch_5;
+  font-size: 0.75rem;
+  border-radius: 30px;
+  transition: all 0.25s ease-in-out;
+}
+.cta-btn {
+  text-transform: uppercase;
+}
+// width styles
+.width-48 {
+  width: 100%;
+  max-width: 48px;
+}
+// pointer styles
+.cpointer {
+  cursor: pointer;
+}
+// COMPONENTS
+// divider
+.component {
+  width: 100%;
+  margin: 40px auto;
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+}
+.component-content {
+  border-top: 1px solid #d2d2d7;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.dividernav {
+  margin: 36px auto 42px;
+}
+// middot
+.middot {
+  margin: auto 7px;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 0;
+}
+// underlines
+.underline {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  &::before {
+    content: '';
+    width: 105%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+  }
+  &-shape-1::before {
+    background: url('/src/assets/images/svgs/underline-shape-1.svg') no-repeat
+      center bottom;
+    bottom: -10px;
+  }
+  &-shape-2::before {
+    background: url('/src/assets/images/svgs/underline-shape-2.svg') no-repeat
+      center bottom;
+    bottom: -2px;
+  }
+  &-shape-3::before {
+    background: url('/src/assets/images/svgs/underline-shape-3.svg') no-repeat
+      center bottom;
+    bottom: -2px;
+  }
+  &-shape-4::before {
+    background: url('/src/assets/images/svgs/underline-shape-4.svg') no-repeat
+      center bottom;
+    bottom: -2px;
+  }
+  &-shape-5::before {
+    background: url('/src/assets/images/svgs/underline-shape-5.svg') no-repeat
+      center bottom;
+    bottom: -4px;
+  }
+}
+// container
+.maxwidth {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media('screen', '>xl') {
+    max-width: 1140px;
+  }
+  @include media('screen', '>lg', '<xl') {
+    max-width: 960px;
+  }
+  @include media('screen', '>md', '<lg') {
+    max-width: 720px;
+  }
+  @include media('screen', '>sm', '<md') {
+    max-width: 540px;
+  }
+  @include media('screen', '>xs', '<sm') {
+    max-width: 456px;
+  }
+  @include media('screen', '<xs') {
+    max-width: 100%;
+  }
+}
+// visibility class
+@include media('screen', '<sm') {
+  .hidden-sm {
+    display: none;
+  }
+}

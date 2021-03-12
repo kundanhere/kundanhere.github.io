@@ -1,0 +1,35 @@
+.header {
+  padding: 0.5rem 5rem; // 8px 80px;
+  @include media('screen', '<md') {
+    padding: 0.5rem 2rem;
+  }
+  .nav {
+    &__logo {
+      img {
+        height: 58px;
+        @include media('screen', '<sm') {
+          height: 48px;
+          margin-top: 3vh;
+        }
+      }
+    }
+    &__links {
+      li {
+        list-style: none;
+        &:not(:last-child) {
+          margin-right: 6px;
+        }
+        a {
+          display: block;
+          font-size: $XSmallFontSize; // 14px
+          padding: 0.75rem 1.125rem; // 12px 18px;
+          color: var(--cod-gray);
+          &:hover,
+          &:focus {
+            color: var(--mid-gray);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// Predefined Break-points
+$mediaXL: 1200px; /* Extra large devices (large laptops and desktops, 1200px and up) */
+$mediaLg: 992px; /* Large devices (laptops/desktops, 992px and up) */
+$mediaMd: 768px; /* Medium devices (landscape tablets, 768px and up) */
+$mediaSm: 576px; /* Small devices (portrait tablets and large phones, 576px and up) */
+$mediaXS: 480px; /* Extra small devices (phones, 576px and down) */
+
+@function translate-media-condition($c) {
+  $condMap: (
+    'screen': 'only screen',
+    'print': 'only print',
+    'retina':
+      '(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)',
+    '>xl': '(min-width: #{$mediaXL + 1})',
+    '<xl': '(max-width: #{$mediaXL})',
+    '>lg': '(min-width: #{$mediaLg + 1})',
+    '<lg': '(max-width: #{$mediaLg})',
+    '>md': '(min-width: #{$mediaMd + 1})',
+    '<md': '(max-width: #{$mediaMd})',
+    '>sm': '(min-width: #{$mediaSm + 1})',
+    '<sm': '(max-width: #{$mediaSm})',
+    '>xs': '(min-width: #{$mediaXS + 1})',
+    '<xs': '(max-width: #{$mediaXS})',
+  );
+  @return map-get($condMap, $c);
+}
+
+// The media mixin
+@mixin media($args...) {
+  $query: '';
+  @each $arg in $args {
+    $op: '';
+    @if ($query != '') {
+      $op: ' and ';
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query} {
+    @content;
+  }
+}

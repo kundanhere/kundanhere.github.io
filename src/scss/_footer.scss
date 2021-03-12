@@ -1,0 +1,51 @@
+.footer {
+  margin-bottom: 56px;
+  @include media('screen', '<md') {
+    margin-bottom: 26px;
+  }
+  .component {
+    margin-bottom: 16px;
+  }
+  &__content {
+    .social__links {
+      display: inline-flex;
+    }
+    .email {
+      p.caption {
+        margin: 0;
+        color: var(--cod-gray);
+      }
+      &.animation-wrap {
+        display: none;
+      }
+    }
+    .animation-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      width: 48px;
+      overflow: hidden;
+      margin: 8px;
+
+      .anim-icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @include media('screen', '<lg') {
+        margin: 4px;
+      }
+    }
+    @include media('screen', '<md') {
+      flex-direction: column-reverse;
+      .email {
+        display: none;
+      }
+      .email.animation-wrap {
+        display: flex;
+      }
+    }
+  }
+}

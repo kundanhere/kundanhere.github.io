@@ -1,0 +1,114 @@
+.qna {
+  position: relative;
+  z-index: 2;
+  &__wrapper {
+    .wrap {
+      width: 70%;
+      @include media('screen', '>md', '<lg') {
+        width: 80%;
+      }
+      @include media('screen', '>sm', '<md') {
+        width: 90%;
+        h3 {
+          font-size: $XLargeFontSize;
+        }
+      }
+      @include media('screen', '<sm') {
+        width: 100%;
+        h3 {
+          font-size: $LargeFontSize;
+        }
+      }
+
+      .heading {
+        span img {
+          width: $XLargeFontSize;
+          margin-bottom: -0.375rem;
+        }
+      }
+      .container {
+        margin: 36px auto;
+        font-weight: normal;
+        @include media('screen', '<md') {
+          margin: 26px auto;
+        }
+        .contact-link {
+          width: 85%;
+          margin: 46px auto;
+          @include media('screen', '<sm') {
+            margin: 26px auto;
+          }
+          h3 {
+            margin-bottom: 26px;
+            text-align: left;
+          }
+          h3.link a {
+            // text-decoration: underline;
+            color: $color_7;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: -7px;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              background-color: $color_7;
+            }
+          }
+        }
+      }
+      button.accordion {
+        width: 85%;
+        text-align: left;
+        cursor: pointer;
+        border: 0px;
+        background-color: transparent;
+        color: var(--mid-gray);
+        font-size: $LargeFontSize;
+        padding: $MediumFontSize;
+        transition: 0.4s;
+        @include media('screen', '<md') {
+          font-size: 1.3125rem;
+          padding: $XSmallFontSize;
+        }
+        @include media('screen', '<sm') {
+          font-size: $MediumFontSize;
+        }
+      }
+      button.accordion.active,
+      button.accordion:hover,
+      button.accordion:focus {
+        color: var(--cod-gray);
+      }
+      button.accordion::after {
+        content: url('/src/assets/images/icons8-sort-down-30x30.png');
+        transform: scale(0.45);
+        float: right;
+        transition: all 0.4s cubic-bezier(0.55, 0.09, 0.68, 0.53) 6ms;
+        opacity: 0.4;
+      }
+      button.accordion.active::after {
+        transform: scale(0.5) rotate(-180deg);
+      }
+      button.accordion.active::after,
+      button.accordion:hover::after,
+      button.accordion:focus::after {
+        opacity: 1;
+      }
+      .panel {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        width: 85%;
+        margin: 0 auto;
+        transition: max-height 0.2s ease-out;
+
+        p.caption {
+          text-align: left;
+          padding-right: 2.25rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.hero {
+  background: url('/src/assets/images/svgs/hero-gradient.svg') no-repeat center
+    center;
+  background-size: contain;
+  overflow: overlay;
+  padding: 36px 0px;
+  &__wrapper {
+    width: 80%;
+    margin: 0 auto;
+    @include media('screen', '<xs') {
+      width: 90%;
+    }
+  }
+  &__img {
+    width: 150px;
+    height: 150px;
+    background: #eaf9fa url('/src/assets/images/profile-image-600x600.png')
+      no-repeat center center;
+    background-size: cover;
+    margin-bottom: 26px;
+    border-radius: 50%;
+    @include media('screen', '<sm') {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &__msg {
+    position: relative;
+    margin-bottom: 32px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -$LargeFontSize;
+      width: $LargeFontSize;
+      height: $LargeFontSize;
+      background: url('/src/assets/images/emoji-icons/apple-sign-of-the-horns-emoji.png')
+        no-repeat center center;
+      background-size: cover;
+    }
+    @include media('screen', '<xs') {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+  &__headline {
+    margin-bottom: 26px;
+  }
+  &__intro {
+    font-size: $MediumFontSize;
+    margin-bottom: 26px;
+    @include media('screen', '<xs') {
+      font-size: $XSmallFontSize;
+    }
+  }
+  &__btn:hover {
+    transform: scale(0.96);
+  }
+}

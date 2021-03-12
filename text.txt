@@ -1,0 +1,53 @@
+Services:
+UI/UX DESIGN
+UI/UX involves planning and iterating a site's structure and layout. 
+Once the proper information architecture is in place, I design the visual 
+layer to create a beautiful user experience.
+
+FRONT END DEVELOPMENT
+Front End Development is building out the visual components of a website. 
+Using HTML, CSS , and Javascript, I build fast, interactive websites. 
+This also may include a CMS, API's or other integrations.
+
+PRODUCT DEVELOPMENT
+The work that I am most interested in is 0-1 work (helping you get your 
+idea into the world). A recent example of this is Omelo a proof of concept 
+that I built end to end (UI, back end business logic etc).
+
+ABOUT: 
+Hi, I’m Kundan. I’m a multi-talented human with expertise in a wide range of design disciplines.
+
+You can also call me a product designer, interaction, UI, UX, or by any other market-defined 
+function-title. I like to style & develop web and desktop applications. I prefer to continue 
+learning, continue challenging myself and do interesting things that matter. I’m a quick learner, 
+ready to acquire new skills, and juggle different projects and roles with relative ease.
+
+“There’s nothing — I enjoy quite designing and developing good websites for nice people. It really 
+is that simple. I’ve spent years trying to perfect what I do and while I’ll never be perfect, I do 
+my best to come close.”
+If you’ve got a project you’d like to work on with me just get in-tuned and that we can get to work!
+
+SERVICES:
+1. Strategy & Direction
+Defining the problem, identifying the scope, and eventually, organizing
+the design roadmap to bring out 100% of each project.
+
+2. UI/UX Design
+Website, application, and another design-related tasks. I really like tackling 
+digital problems and help to fix them.
+
+3. Product Development
+The work that I am most interested in is 0-1 work, helping you get your idea into the world.
+
+QnA:
+1. What is your work discipline?
+Every project involves planning, structure, and a layout. Once the proper information 
+architecture is in place, I design the visual layer to make an attractive user experience. 
+A recent example of this is often SoftdocMusic a symbol of concept that I built end to end 
+(UI, back-end business logic, etc).
+
+2. Do you work on more than one project?
+Yes, but I do schedule the days, and hours for each project and provides those 
+hours and days to the people I work with.
+
+3. How much cost your hourly rate?

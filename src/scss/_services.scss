@@ -1,0 +1,64 @@
+.services {
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      width: 75%;
+      height: 100%;
+      background: url('/src/assets/images/svgs/services-background.svg')
+        no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+
+      @include media('screen', '>md', '<lg') {
+        width: 80%;
+      }
+      @include media('screen', '>sm', '<md') {
+        width: 90%;
+      }
+      @include media('screen', '<sm') {
+        width: 100%;
+      }
+    }
+    .flex-wrap {
+      padding-bottom: 66px;
+      @include media('screen', '<md') {
+        flex-direction: column;
+        padding-bottom: 46px;
+      }
+      .card {
+        width: 300px;
+        background: #ffffff;
+        padding: 30px 18px;
+        box-shadow: 0 5px 20px 0 rgba(171, 171, 171, 0.08);
+
+        @include media('screen', '>md', '<lg') {
+          width: 220px;
+        }
+        @include media('screen', '<md') {
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+
+        img {
+          width: 22%;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  .subtitle-2 {
+    padding: 36px 0;
+    @include media('screen', '<md') {
+      padding: 26px 0;
+    }
+    &.pt-0 {
+      padding: 0;
+    }
+  }
+}
